@@ -1,0 +1,50 @@
+# 激活虚拟环境
+. /root/autodl-tmp/venv_openp5/bin/activate
+
+# 启动分布式训练（2卡）
+torchrun --nproc_per_node=4 --master_port=2019 ../../src/src_t5/main.py \
+--datasets Yelp \
+--distributed 1 \
+--gpu 0,1,2,3 \
+--tasks sequential,straightforward \
+--item_indexing random \
+--epochs 10 \
+--batch_size 128 \
+--master_port 2019 \
+--prompt_file ../../prompt.txt \
+--sample_prompt 1 \
+--eval_batch_size 20 \
+--dist_sampler 0 \
+--max_his 20  \
+--sample_num 2,2 \
+--test_prompt seen:0 \
+--lr 1e-3 \
+--test_before_train 0 \
+--test_epoch 0 \
+--train 0 \
+--test_filtered 0 \
+--model_path ./Yelp_random.pt \
+--data_path /root/autodl-tmp/OpenP5-main/data
+
+torchrun --nproc_per_node=4 --master_port=2019 ../../src/src_t5/main.py \
+--datasets Yelp \
+--distributed 1 \
+--gpu 0,1,2,4 \
+--tasks sequential,straightforward \
+--item_indexing random \
+--epochs 10 \
+--batch_size 128 \
+--master_port 2019 \
+--prompt_file ../../prompt.txt \
+--sample_prompt 1 \
+--eval_batch_size 20 \
+--dist_sampler 0 \
+--max_his 20  \
+--sample_num 2,2 \
+--test_prompt unseen:0 \
+--lr 1e-3 --test_before_train 0 \
+--test_epoch 0 \
+--train 0 \
+--test_filtered 0 \
+--model_path ./Yelp_random.pt \
+--data_path /root/autodl-tmp/OpenP5-main/data
