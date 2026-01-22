@@ -60,7 +60,3 @@ We provide checkpoints for reproducibility without full training.
 
 * Checkpoints: `./checkpoint/`
 * Test scripts: `./test_command/`
-
-```
-::contentReference[oaicite:0]{index=0}
-```
