@@ -61,8 +61,6 @@ We provide checkpoints for reproducibility without full training.
 * Checkpoints: `./checkpoint/`
 * Test scripts: `./test_command/`
 
-Run testing directly after placing checkpoints in the expected paths used by `test_command/*.sh`.
-
 ```
 ::contentReference[oaicite:0]{index=0}
 ```
