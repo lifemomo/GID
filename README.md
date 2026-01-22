@@ -56,7 +56,7 @@ sh Beauty_collaborative.sh
 
 ## Checkpoints
 
-We provide checkpoints for reproducibility without full training.
+We provide checkpoints for reproducibility without full training
 
 * Checkpoints: `./checkpoint/`
 * Test scripts: `./test_command/`
