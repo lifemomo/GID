@@ -56,7 +56,7 @@ sh Beauty_collaborative.sh
 
 ## Checkpoints
 
-We provide checkpoints for reproducibility without full training
+Download the checkpoint from Google Drive link(https://drive.google.com/drive/u/1/folders/1TYVg2PtiZfFFfEsR5MExCaJGlOOBd2c1), and put them into ./checkpoint folder. The evaluation command can be found in ./test_command folder. Run the command such as
 
-* Checkpoints: `./checkpoint/`
-* Test scripts: `./test_command/`
+cd ./test_command
+sh Beauty_collaborative.sh
